@@ -88,7 +88,7 @@ form.addEventListener("submit", function (event) {
   }
 
   // Mantém a validação da data, mesmo que o atributo min seja alterado no HTML.
-  if (dateInput.value < today) {
+  if (dateInput.value && dateInput.value < today) {
     formMessage.textContent =
       "Escolha uma data preferencial igual ou posterior à data atual.";
     formMessage.style.color = "#b42318";
