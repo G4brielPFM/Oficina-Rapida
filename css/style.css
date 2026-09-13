@@ -145,7 +145,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); outline: 
 .footer-content { display: flex; justify-content: space-between; gap: 16px; }
 .footer-content p { margin: 0; }
 
-/* Ajustes responsivos para tablets e telas médias */
+/* Ajustes de medidas para tablets e telas médias */
 @media (max-width: 850px) {
   .header-content { align-items: flex-start; flex-direction: column; padding: 14px 0; }
   .main-nav { justify-content: flex-start; }
@@ -154,7 +154,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); outline: 
   .contact-grid { gap: 20px; }
 }
 
-/* Ajustes responsivos para celulares */
+/* Ajustes de medidas para celulares */
 @media (max-width: 600px) {
   .container { width: min(100% - 28px, 1120px); }
   .hero-section, .section { padding: 56px 0; }
@@ -163,4 +163,20 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); outline: 
   .hero-card, #budget-form { padding: 22px; }
   .services-grid, .form-grid { grid-template-columns: 1fr; }
   .footer-content { flex-direction: column; }
+}
+
+/* Destaca o asterisco dos campos obrigatórios */
+.required-mark {
+    color: #b42318;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+/* Texto de orientação abaixo dos campos */
+.form-help {
+    display: block;
+    margin-top: 6px;
+    color: #5f6b7a;
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
