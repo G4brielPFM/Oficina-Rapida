@@ -188,6 +188,7 @@
                                 <option value="Diagnóstico eletrônico">Diagnóstico eletrônico</option>
                                 <option value="Alinhamento">Alinhamento</option>
                                 <option value="Ar-condicionado">Ar-condicionado</option>
+                                <option value="Outro">Outro</option>
                             </select>
                         </div>
 
@@ -200,9 +201,9 @@
                     <!-- Fieldset agrupa as opções de urgência para melhorar a semântica do formulário,
                          o required (obrigátorio) só é necessário colocar em um dos elementos do radio group-->
                     <fieldset class="form-group">
-                        <legend>Nível de urgência</legend>
+                        <legend>Nível de urgência <span class="required-mark">*</span></legend>
                         <div class="radio-group">
-                            <label><input type="radio" name="urgency" value="Normal" required> Normal</label>
+                            <label><input type="radio" name="urgency" value="Normal" > Normal</label>
                             <label><input type="radio" name="urgency" value="Prioritário"> Prioritário</label>
                             <label><input type="radio" name="urgency" value="Urgente"> Urgente</label>
                         </div>
