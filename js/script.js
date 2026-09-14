@@ -43,9 +43,9 @@ filterButtons.forEach(function (button) {
 phoneInput.addEventListener("input", function () {
   const digits = phoneInput.value.replace(/\D/g, "");
 
-  if (digits.length > 0 && digits.length < 10) {
+  if (digits.length > 0 && (digits.length < 10 || digits.length > 11)) {
     phoneInput.setCustomValidity(
-      "Informe um telefone com DDD e pelo menos 10 dígitos."
+      "Informe um telefone com DDD de 10 ou 11 dígitos."
     );
   } else {
     phoneInput.setCustomValidity("");
