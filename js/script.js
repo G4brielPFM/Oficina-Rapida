@@ -39,10 +39,29 @@ filterButtons.forEach(function (button) {
   });
 });
 
-// Verifica se o telefone possui DDD e uma quantidade mínima de dígitos.
+// Aplica a máscara (00) 0000-0000 ou (00) 00000-0000 enquanto o usuário digita.
 phoneInput.addEventListener("input", function () {
-  const digits = phoneInput.value.replace(/\D/g, "");
+  // Remove tudo que não for número e limita a 11 dígitos.
+  let digits = phoneInput.value.replace(/\D/g, "").slice(0, 11);
 
+  // Formata progressivamente o telefone.
+  if (digits.length <= 2) {
+    phoneInput.value = digits;
+  } else if (digits.length <= 6) {
+    phoneInput.value = "(" + digits.slice(0, 2) + ") " + digits.slice(2);
+  } else if (digits.length <= 10) {
+    phoneInput.value =
+      "(" + digits.slice(0, 2) + ") " +
+      digits.slice(2, 6) + "-" +
+      digits.slice(6);
+  } else {
+    phoneInput.value =
+      "(" + digits.slice(0, 2) + ") " +
+      digits.slice(2, 7) + "-" +
+      digits.slice(7);
+  }
+
+  // Valida somente quando já existe algum número informado.
   if (digits.length > 0 && (digits.length < 10 || digits.length > 11)) {
     phoneInput.setCustomValidity(
       "Informe um telefone com DDD de 10 ou 11 dígitos."
@@ -79,13 +98,13 @@ form.addEventListener("submit", function (event) {
   }
 
   // Realiza uma validação complementar para o telefone informado.
-  if (phoneDigits.length < 10) {
-    formMessage.textContent =
-      "Informe um telefone com DDD e pelo menos 10 dígitos.";
-    formMessage.style.color = "#b42318";
-    phoneInput.focus();
-    return;
-  }
+if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+  formMessage.textContent =
+    "Informe um telefone com DDD de 10 ou 11 dígitos.";
+  formMessage.style.color = "#b42318";
+  phoneInput.focus();
+  return;
+}
 
   // Mantém a validação da data, mesmo que o atributo min seja alterado no HTML.
   if (dateInput.value && dateInput.value < today) {
