@@ -164,8 +164,26 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Telefone/WhatsApp <span class="required-mark">*</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999" required>
+                            <label for="phone">
+                                Telefone/WhatsApp
+                                <span class="required-mark" aria-hidden="true">*</span>
+                            </label>
+                        
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="(00) 00000-0000"
+                                minlength="10"
+                                maxlength="15"
+                                required
+                                inputmode="numeric"
+                                aria-describedby="phone-help"
+                            >
+                        
+                            <small id="phone-help" class="form-help">
+                                Informe o telefone com DDD: 10 ou 11 números.
+                            </small>
                         </div>
 
                         <div class="form-group">
