@@ -1,0 +1,122 @@
+[
+  {
+    "id": 101,
+    "name": "Carlos Eduardo Silva",
+    "email": "carlos.silva@email.com",
+    "phone": "(27) 99881-1234",
+    "vehicle": "Chevrolet Onix",
+    "year": 2021,
+    "service": "Troca de óleo",
+    "date": "2026-11-10",
+    "urgency": "Normal",
+    "description": "Troca de óleo de motor e filtro sintético."
+  },
+  {
+    "id": 102,
+    "name": "Mariana Souza Santos",
+    "email": "mariana.souza@gmail.com",
+    "phone": "(27) 99772-5678",
+    "vehicle": "Hyundai HB20",
+    "year": 2020,
+    "service": "Revisão preventiva",
+    "date": "2026-11-12",
+    "urgency": "Prioritário",
+    "description": "Revisão geral dos 50.000 km."
+  },
+  {
+    "id": 103,
+    "name": "Roberto Alves Pereira",
+    "email": "roberto.alves@hotmail.com",
+    "phone": "(27) 99663-9012",
+    "vehicle": "Toyota Corolla",
+    "year": 2019,
+    "service": "Freios e suspensão",
+    "date": "2026-11-08",
+    "urgency": "Urgente",
+    "description": "Ruído forte ao acionar os freios dianteiros."
+  },
+  {
+    "id": 104,
+    "name": "Fernanda Lima Castro",
+    "email": "fernanda.lima@outlook.com",
+    "phone": "(27) 99554-3456",
+    "vehicle": "Honda Civic",
+    "year": 2022,
+    "service": "Diagnóstico eletrônico",
+    "date": "2026-11-15",
+    "urgency": "Normal",
+    "description": "Luz de injeção acesa no painel."
+  },
+  {
+    "id": 105,
+    "name": "Lucas Costa Mendes",
+    "email": "lucas.mendes@email.com",
+    "phone": "(27) 99445-7890",
+    "vehicle": "Volkswagen Gol",
+    "year": 2018,
+    "service": "Alinhamento",
+    "date": "2026-11-09",
+    "urgency": "Normal",
+    "description": "Alinhamento e balanceamento das 4 rodas."
+  },
+  {
+    "id": 106,
+    "name": "Patricia Ribeiro Rocha",
+    "email": "patricia.rocha@gmail.com",
+    "phone": "(27) 99336-1234",
+    "vehicle": "Jeep Renegade",
+    "year": 2023,
+    "service": "Ar-condicionado",
+    "date": "2026-11-11",
+    "urgency": "Prioritário",
+    "description": "Higienização e carga de gás do ar-condicionado."
+  },
+  {
+    "id": 107,
+    "name": "Gustavo Martins Barbosa",
+    "email": "gustavo.bm@hotmail.com",
+    "phone": "(27) 99227-5678",
+    "vehicle": "Fiat Argo",
+    "year": 2021,
+    "service": "Troca de óleo",
+    "date": "2026-11-14",
+    "urgency": "Normal",
+    "description": "Troca rápida de óleo e filtro de ar."
+  },
+  {
+    "id": 108,
+    "name": "Beatriz Ramos Ferreira",
+    "email": "beatriz.rf@gmail.com",
+    "phone": "(27) 99118-9012",
+    "vehicle": "Nissan Kicks",
+    "year": 2022,
+    "service": "Freios e suspensão",
+    "date": "2026-11-07",
+    "urgency": "Urgente",
+    "description": "Pedal do freio baixo e trepidação na direção."
+  },
+  {
+    "id": 109,
+    "name": "Thiago Araujo Fonseca",
+    "email": "thiago.fonseca@email.com",
+    "phone": "(27) 99009-3456",
+    "vehicle": "Renault Kwid",
+    "year": 2020,
+    "service": "Outro",
+    "date": "2026-11-18",
+    "urgency": "Normal",
+    "description": "Troca da palheta do limpador de para-brisa e lâmpadas do farol."
+  },
+  {
+    "id": 110,
+    "name": "Camila Oliveira Nunes",
+    "email": "camila.nunes@outlook.com",
+    "phone": "(27) 98990-7890",
+    "vehicle": "Ford Ka",
+    "year": 2019,
+    "service": "Revisão preventiva",
+    "date": "2026-11-20",
+    "urgency": "Prioritário",
+    "description": "Revisão antes de viagem de fim de ano."
+  }
+]
