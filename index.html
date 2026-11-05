@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oficina Rápida: serviços automotivos e solicitação de orçamento.">
+    <meta name="description" content="Oficina Rápida: serviços automotivos e gerenciamento de solicitações.">
     <title>Oficina Rápida | Serviços Automotivos</title>
-
-    <!-- Conexão com a folha de estilos externa -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho com identificação da oficina e navegação interna -->
+    <!-- Cabeçalho -->
     <header class="site-header" id="inicio">
         <div class="container header-content">
             <a class="logo" href="#inicio" aria-label="Voltar ao início da Oficina Rápida">
@@ -22,20 +19,19 @@
                 </span>
             </a>
 
-            <!-- Menu com links para as seções da página única -->
             <nav class="main-nav" aria-label="Navegação principal">
                 <a href="#inicio">Início</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#orcamento">Orçamento</a>
+                <a href="#orcamento">Solicitar</a>
+                <a href="#gerenciamento">Gerenciar Pedidos</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
 
-    <!-- Conteúdo principal da aplicação -->
     <main>
-        <!-- Área inicial com apresentação e botões de chamada para ação -->
+        <!-- Hero Section -->
         <section class="hero-section" aria-labelledby="titulo-principal">
             <div class="container hero-content">
                 <div class="hero-text">
@@ -44,7 +40,7 @@
                     <p>Manutenção, revisão e diagnóstico automotivo com atendimento transparente e profissionais preparados.</p>
                     <div class="hero-actions">
                         <a class="button button-primary" href="#orcamento">Solicitar orçamento</a>
-                        <a class="button button-secondary" href="#servicos">Ver serviços</a>
+                        <a class="button button-secondary" href="#gerenciamento">Ver solicitações</a>
                     </div>
                 </div>
 
@@ -57,7 +53,7 @@
             </div>
         </section>
 
-        <!-- Serviços automotivos com botões para filtrar as categorias -->
+        <!-- Seção de Serviços -->
         <section class="section" id="servicos" aria-labelledby="titulo-servicos">
             <div class="container">
                 <div class="section-heading">
@@ -66,7 +62,6 @@
                     <p>Escolha uma categoria ou confira todos os serviços oferecidos.</p>
                 </div>
 
-                <!-- Os atributos data-filter são usados pelo JavaScript -->
                 <div class="filter-buttons" aria-label="Filtros de serviços">
                     <button class="filter-button active" type="button" data-filter="todos">Todos</button>
                     <button class="filter-button" type="button" data-filter="manutencao">Manutenção</button>
@@ -74,7 +69,6 @@
                     <button class="filter-button" type="button" data-filter="diagnostico">Diagnóstico</button>
                 </div>
 
-                <!-- Cada cartão possui uma categoria usada pelo filtro de serviços -->
                 <div class="services-grid">
                     <article class="service-card" data-category="manutencao">
                         <span class="service-icon">🔧</span>
@@ -82,35 +76,30 @@
                         <p>Troca do óleo e verificação dos componentes básicos do motor.</p>
                         <span class="service-tag">Manutenção</span>
                     </article>
-
                     <article class="service-card" data-category="revisao">
                         <span class="service-icon">✓</span>
                         <h3>Revisão preventiva</h3>
                         <p>Avaliação dos principais itens para evitar problemas futuros.</p>
                         <span class="service-tag">Revisão</span>
                     </article>
-
                     <article class="service-card" data-category="manutencao">
                         <span class="service-icon">◉</span>
                         <h3>Freios e suspensão</h3>
                         <p>Inspeção e manutenção para melhorar a segurança do veículo.</p>
                         <span class="service-tag">Manutenção</span>
                     </article>
-
                     <article class="service-card" data-category="diagnostico">
                         <span class="service-icon">⌁</span>
                         <h3>Diagnóstico eletrônico</h3>
                         <p>Identificação de falhas por meio de análise dos sistemas do veículo.</p>
                         <span class="service-tag">Diagnóstico</span>
                     </article>
-
                     <article class="service-card" data-category="revisao">
                         <span class="service-icon">◌</span>
                         <h3>Alinhamento</h3>
                         <p>Verificação da geometria das rodas e do desgaste dos pneus.</p>
                         <span class="service-tag">Revisão</span>
                     </article>
-
                     <article class="service-card" data-category="diagnostico">
                         <span class="service-icon">▣</span>
                         <h3>Ar-condicionado</h3>
@@ -121,7 +110,7 @@
             </div>
         </section>
 
-        <!-- Informações institucionais e diferenciais da oficina -->
+        <!-- Sobre -->
         <section class="section section-muted" id="sobre" aria-labelledby="titulo-sobre">
             <div class="container about-grid">
                 <div>
@@ -141,17 +130,18 @@
             </div>
         </section>
 
-        <!-- Formulário usado para simular uma solicitação de orçamento -->
+        <!-- Formulário de Solicitação -->
         <section class="section" id="orcamento" aria-labelledby="titulo-orcamento">
             <div class="container form-layout">
                 <div class="section-heading">
                     <p class="eyebrow">Fale com a nossa equipe</p>
                     <h2 id="titulo-orcamento">Solicite seu orçamento</h2>
-                    <p>Preencha os dados abaixo. As informações serão usadas apenas para simular a solicitação durante este protótipo.</p>
+                    <p>Preencha os dados abaixo para cadastrar uma nova solicitação.</p>
                 </div>
 
-                <!-- O JavaScript trata o envio para validar dados e exibir uma confirmação -->
                 <form id="budget-form" novalidate>
+                    <input type="hidden" id="edit-id" name="edit-id" value="">
+                    
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="name">Nome completo <span class="required-mark">*</span></label>
@@ -164,26 +154,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">
-                                Telefone/WhatsApp
-                                <span class="required-mark" aria-hidden="true">*</span>
-                            </label>
-                        
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="(00) 00000-0000"
-                                minlength="10"
-                                maxlength="15"
-                                required
-                                inputmode="numeric"
-                                aria-describedby="phone-help"
-                            >
-                        
-                            <small id="phone-help" class="form-help">
-                                Informe o telefone com DDD: 10 ou 11 números.
-                            </small>
+                            <label for="phone">Telefone/WhatsApp <span class="required-mark">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" minlength="10" maxlength="15" required inputmode="numeric">
+                            <small id="phone-help" class="form-help">Informe o telefone com DDD: 10 ou 11 números.</small>
                         </div>
 
                         <div class="form-group">
@@ -216,48 +189,111 @@
                         </div>
                     </div>
 
-                    <!-- Fieldset agrupa as opções de urgência para melhorar a semântica do formulário,
-                         o required (obrigátorio) só é necessário colocar em um dos elementos do radio group-->
                     <fieldset class="form-group">
                         <legend>Nível de urgência <span class="required-mark">*</span></legend>
                         <div class="radio-group">
-                            <label><input type="radio" name="urgency" value="Normal" > Normal</label>
+                            <label><input type="radio" name="urgency" value="Normal" checked> Normal</label>
                             <label><input type="radio" name="urgency" value="Prioritário"> Prioritário</label>
                             <label><input type="radio" name="urgency" value="Urgente"> Urgente</label>
                         </div>
                     </fieldset>
 
                     <div class="form-group">
-                    <label for="description">
-                        Descrição do problema
-                        <span class="required-mark" aria-hidden="true">*</span>
-                    </label>
-                
-                    <textarea
-                        id="description"
-                        name="description"
-                        rows="5"
-                        minlength="10"
-                        maxlength="500"
-                        placeholder='Descreva o problema ou, se escolher "Outro" serviço, informe o serviço desejado.'
-                        required
-                        aria-describedby="description-help"
-                    ></textarea>
-                
-                    <small id="description-help" class="form-help">
-                        Campo obrigatório. Se selecionar “Outro” em Serviço Desejado, informe aqui o serviço de que precisa, se possível detalhe.
-                    </small>
-                </div>
+                        <label for="description">Descrição do problema <span class="required-mark">*</span></label>
+                        <textarea id="description" name="description" rows="5" minlength="10" maxlength="500" placeholder='Descreva o problema ou detalhe o serviço necessário.' required></textarea>
+                    </div>
 
-
-                    <!-- Área para apresentar erros e confirmação ao usuário -->
                     <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
-                    <button class="button button-primary submit-button" type="submit">Enviar solicitação</button>
+                    <div class="form-actions">
+                        <button class="button button-primary submit-button" type="submit" id="submit-btn">Enviar solicitação</button>
+                        <button class="button button-secondary" type="button" id="cancel-edit-btn" style="display: none;">Cancelar edição</button>
+                    </div>
                 </form>
             </div>
         </section>
 
-        <!-- Dados de contato exibidos ao final do conteúdo principal -->
+        <!-- NOVO: Seção de Gerenciamento e CRUD no Cliente (Requisito 2º Bimestre) -->
+        <section class="section section-muted" id="gerenciamento" aria-labelledby="titulo-gerenciamento">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Painel de Controle</p>
+                    <h2 id="titulo-gerenciamento">Gerenciamento de Solicitações (CRUD)</h2>
+                    <p>Consulte, filtre, ordene, edite e exclua as solicitações registradas.</p>
+                </div>
+
+                <!-- Resumo Calculado (Métricas em Tempo Real) -->
+                <div class="summary-cards" id="summary-container">
+                    <div class="summary-card">
+                        <span class="summary-title">Total de Solicitações</span>
+                        <strong class="summary-value" id="total-count">0</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-title">Urgentes / Prioritários</span>
+                        <strong class="summary-value" id="urgent-count">0</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-title">Último Agendamento</span>
+                        <strong class="summary-value" id="latest-date">-</strong>
+                    </div>
+                </div>
+
+                <!-- Controles de Busca, Filtro e Ordenação -->
+                <div class="table-controls">
+                    <div class="control-group">
+                        <label for="search-input">Buscar cliente ou veículo:</label>
+                        <input type="text" id="search-input" placeholder="Digite nome, veículo ou serviço...">
+                    </div>
+                    <div class="control-group">
+                        <label for="filter-urgency">Filtrar Urgência:</label>
+                        <select id="filter-urgency">
+                            <option value="todos">Todas</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Prioritário">Prioritário</option>
+                            <option value="Urgente">Urgente</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="sort-select">Ordenar por:</label>
+                        <select id="sort-select">
+                            <option value="recentes">Mais recentes</option>
+                            <option value="nome">Nome do cliente (A-Z)</option>
+                            <option value="urgencia">Nível de urgência</option>
+                        </select>
+                    </div>
+                    <button class="button button-secondary" id="btn-reload-json" type="button" title="Recarregar dados do arquivo JSON local">
+                        🔄 Recarregar JSON
+                    </button>
+                </div>
+
+                <!-- Estados de Carregamento e Mensagens do Fetch -->
+                <div id="fetch-status" class="fetch-status-container" role="status" aria-live="polite">
+                    <div id="loading-spinner" class="spinner" style="display: none;">Carregando solicitações do servidor/JSON...</div>
+                    <div id="error-message" class="error-banner" style="display: none;"></div>
+                </div>
+
+                <!-- Tabela Responsiva para Listagem e Ações CRUD -->
+                <div class="table-wrapper">
+                    <table class="crud-table">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Contato</th>
+                                <th>Veículo / Ano</th>
+                                <th>Serviço</th>
+                                <th>Urgência</th>
+                                <th>Data Pref.</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crud-table-body">
+                            <!-- Preenchido dinamicamente via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
         <section class="contact-section" id="contato" aria-labelledby="titulo-contato">
             <div class="container contact-grid">
                 <div>
@@ -280,7 +316,6 @@
         </section>
     </main>
 
-    <!-- Rodapé com identificação acadêmica do protótipo -->
     <footer class="site-footer">
         <div class="container footer-content">
             <p>Oficina Rápida — Serviços Automotivos</p>
@@ -288,7 +323,6 @@
         </div>
     </footer>
 
-    <!-- Conexão com o arquivo JavaScript responsável pelas interações -->
     <script src="js/script.js"></script>
 </body>
 </html>
